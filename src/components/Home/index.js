@@ -2,14 +2,29 @@ import { useState, useEffect } from "react";
 
 import Header from "../Header";
 import ProductCard from "../ProductCard";
+import ProductHeader from "../ProductHeader";
 import "./index.css";
+
+const sortbyOptions = [
+  {
+    optionId: "asc",
+    displayText: "ascending-order",
+  },
+  {
+    optionId: "desc",
+    displayText: "descending-order",
+  },
+];
 
 const Home = () => {
   const [productsList, setProductsList] = useState([]);
   const [activeButtonId, setActiveButtonId] = useState("");
+  const [activeOptionId, setActiveOptionId] = useState(
+    sortbyOptions[0].optionId
+  );
 
   const fetchFakeStoreApi = async () => {
-    const url = "https://fakestoreapi.com/products";
+    const url = `https://fakestoreapi.com/products?sort=${activeOptionId}`;
     try {
       const apiResponse = await fetch(url);
       const data = await apiResponse.json();
@@ -21,9 +36,14 @@ const Home = () => {
 
   useEffect(() => {
     fetchFakeStoreApi();
-  }, []);
+    // eslint-disable-next-line
+  }, [activeOptionId]);
 
   const toggleIsFavorite = (id) => setActiveButtonId(id);
+
+  const updateActiveOptionId = (value) => {
+    setActiveOptionId(value);
+  };
 
   return (
     <>
@@ -36,6 +56,11 @@ const Home = () => {
           dolor.
         </p>
       </div>
+      <ProductHeader
+        sortbyOptions={sortbyOptions}
+        activeOptionId={activeOptionId}
+        updateActiveOptionId={updateActiveOptionId}
+      />
       <ul className="total-products-container">
         {productsList.map((eachProduct) => (
           <ProductCard
