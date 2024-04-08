@@ -1,0 +1,83 @@
+.single-product-container {
+  list-style-type: none;
+  margin: 10px;
+  min-width: 300px;
+  background-color: white;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightslategray;
+  padding: 10px;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+}
+
+.product-title {
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  color: #252020;
+  max-width: 200px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-family: Simplon Norm;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #888792;
+}
+
+.dollar-image {
+  font-size: 14px;
+}
+
+.favorites-button {
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .single-product-container {
+    min-width: fit-content;
+  }
+  .product-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .product-title {
+    font-family: Simplon Norm;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    max-width: 80px;
+  }
+
+  .product-price {
+    font-family: Simplon Norm;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+  }
+
+  .favorites-button {
+    font-size: 12px;
+  }
+}
+
+.liked-button {
+  background-color: red;
+  border: 0px;
+}
