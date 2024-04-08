@@ -1,0 +1,48 @@
+.product-header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.sort-by-tag {
+  font-family: Simplon Norm;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #252020;
+}
+
+.sort-by-card {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.sort-by-options {
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #252020;
+}
+
+@media screen and (max-width: 576px) {
+  .product-header-container {
+    margin-right: 10px;
+  }
+  .sort-by-card {
+    font-size: 12px;
+  }
+  .sort-by-options {
+    font-size: 12px;
+  }
+  .sort-by-tag {
+    font-size: 15px;
+  }
+}
