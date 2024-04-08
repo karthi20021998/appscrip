@@ -1,0 +1,45 @@
+.topbar-bg {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-card-1 {
+  display: flex;
+  align-items: center;
+}
+
+.content-card-2 {
+  display: flex;
+  align-items: center;
+}
+
+.content-card-3 {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-image {
+  height: 16px;
+  width: 16px;
+}
+
+.topbar-text {
+  font-family: Simplon Norm;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 1px;
+  color: #eb4c6b;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .content-card-2 {
+    display: none;
+  }
+  .content-card-3 {
+    display: none;
+  }
+}
