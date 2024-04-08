@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import Header from "../Header";
 import ProductCard from "../ProductCard";
-import ProductsHeader from "../ProductsHeader";
+
 import "./index.css";
 
 const Home = () => {
@@ -37,7 +37,6 @@ const Home = () => {
           dolor.
         </p>
       </div>
-      <ProductsHeader />
       <ul className="total-products-container">
         {productsList.map((eachProduct) => (
           <ProductCard
